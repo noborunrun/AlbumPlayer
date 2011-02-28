@@ -3,7 +3,11 @@
 //  albumPlayer
 //
 //  Created by noboru on 3/1/11.
+<<<<<<< HEAD
 //  Copyright 2011 Nine Drafts Inc.. All rights reserved.
+=======
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
+>>>>>>> 6388c4015518040650d8f044823446986b52a6c6
 //
 
 #import <UIKit/UIKit.h>
