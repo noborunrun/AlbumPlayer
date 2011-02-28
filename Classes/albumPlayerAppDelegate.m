@@ -3,7 +3,7 @@
 //  albumPlayer
 //
 //  Created by noboru on 3/1/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Nine Drafts Inc.. All rights reserved.
 //
 
 #import "albumPlayerAppDelegate.h"
