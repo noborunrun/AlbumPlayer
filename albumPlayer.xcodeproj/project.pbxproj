@@ -16,6 +16,7 @@
 		2840D7CE1179279E00D7F93C /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2840D7CD1179279E00D7F93C /* FirstView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
+		EC74A7CA131C5DF200EE9D99 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC74A7C9131C5DF200EE9D99 /* QuartzCore.framework */; };
 		F6750932131C04D500B79107 /* iPodLibraryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F6750931131C04D500B79107 /* iPodLibraryDataSource.m */; };
 		F6750938131C089C00B79107 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6750937131C089C00B79107 /* MediaPlayer.framework */; };
 		F67509A4131C190700B79107 /* nonimage.png in Resources */ = {isa = PBXBuildFile; fileRef = F67509A3131C190700B79107 /* nonimage.png */; };
@@ -36,6 +37,7 @@
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* albumPlayer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "albumPlayer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		EC74A7C9131C5DF200EE9D99 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F6750930131C04D500B79107 /* iPodLibraryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPodLibraryDataSource.h; sourceTree = "<group>"; };
 		F6750931131C04D500B79107 /* iPodLibraryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPodLibraryDataSource.m; sourceTree = "<group>"; };
 		F6750937131C089C00B79107 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -51,6 +53,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
 				F6750938131C089C00B79107 /* MediaPlayer.framework in Frameworks */,
+				EC74A7CA131C5DF200EE9D99 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +89,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				EC74A7C9131C5DF200EE9D99 /* QuartzCore.framework */,
 			);
 			name = albumPlayer;
 			sourceTree = "<group>";

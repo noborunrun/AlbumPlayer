@@ -3,3 +3,4 @@ build/
 *.mode1v3
 noboru.mode2v3
 /Decomarket.xcodeproj/noboru.mode2v3
+/.DS_Store

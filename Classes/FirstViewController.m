@@ -6,6 +6,9 @@
 //  Copyright 2011 Nine Drafts Inc.. All rights reserved.
 //
 
+#define S_HOSEI					0.95
+
+#import <QuartzCore/QuartzCore.h>
 #import "FirstViewController.h"
 #import "iPodLibraryDataSource.h"
 
@@ -39,6 +42,9 @@
     iPLDS.delegate = self;
     self.dataArray = [iPLDS getAllAlbumJacketData];
     self.scrollView.contentSize = CGSizeMake(320, 480);
+	// set scroll view's background color. 
+	self.scrollView.backgroundColor = [UIColor colorWithRed:(10/255) green:(74/255) blue:(12/255) alpha:1.0];
+
     [self setAlbumDataToScrollView];
 }
 
@@ -72,13 +78,32 @@
 -(void) setAlbumDataToScrollView {
     int x = 0;
     int y = 0;
+	// 補正後の画像サイズ
+	float _jacket_image_ssize = JACKET_SIZE * S_HOSEI;
+	float _x_y_hosei = JACKET_SIZE-_jacket_image_ssize;
     for (int i= 0; i<[dataArray count]; i++) {
         NSLog(@"%d,%d",x,y);
+		// Made mask layer.
+		CALayer *roundRectLayer = [CALayer layer];
+		roundRectLayer.frame = CGRectMake(0, 0, _jacket_image_ssize, _jacket_image_ssize);
+		UIGraphicsBeginImageContextWithOptions(CGSizeMake(_jacket_image_ssize, _jacket_image_ssize), NO, 0.0); // iOS4
+		//UIGraphicsBeginImageContext(CGSizeMake(JACKET_SIZE, JACKET_SIZE)); // iOS3
+		UIBezierPath *roundRectPath = [UIBezierPath bezierPathWithRoundedRect:roundRectLayer.frame cornerRadius:10.f];
+		[[UIColor blackColor] setFill];
+		[roundRectPath fill];
+		UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		roundRectLayer.contents = (id)img.CGImage;
+		
         UIImageView *aImageView = [[UIImageView alloc] initWithImage:[dataArray objectAtIndex:i]];
-        aImageView.frame = CGRectMake(JACKET_SIZE * x, JACKET_SIZE * y, JACKET_SIZE, JACKET_SIZE);
+        aImageView.frame = CGRectMake(JACKET_SIZE * x, JACKET_SIZE * y, _jacket_image_ssize, _jacket_image_ssize);
+		aImageView.layer.masksToBounds = YES;	//UIImageView's layer mask is YES.
+		aImageView.layer.mask = roundRectLayer;	//Insert mask layer.
+		
         [self.scrollView addSubview:aImageView];
         UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        aButton.frame = aImageView.frame;
+        //aButton.frame = aImageView.frame;
+		aButton.frame = CGRectMake(JACKET_SIZE * x, JACKET_SIZE * y, JACKET_SIZE, JACKET_SIZE);
         aButton.tag = i;
         [aButton addTarget:self action:@selector(albumTapped:) forControlEvents:UIControlEventTouchUpInside];
         [self.scrollView addSubview:aButton];
