@@ -140,9 +140,7 @@ static NSMutableArray *_albumQueue;
         }
         [pool drain];
     }
-    if (x == 4) {
-        self.scrollView.contentSize = CGSizeMake(320, JACKET_SIZE * y+1);
-    }
+    self.scrollView.contentSize = CGSizeMake(320, JACKET_SIZE * y+1);
     _albumThreadRunning = NO;
     [CATransaction unlock];
 }
