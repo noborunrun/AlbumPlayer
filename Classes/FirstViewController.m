@@ -89,14 +89,16 @@ static NSMutableArray *_albumQueue;
 }
 
 - (void)albumThread:(id)unused {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
     [CATransaction lock];
     int x = 0;
     int y = 0;
     float _jacket_image_ssize = JACKET_SIZE * S_HOSEI;
 	float _x_y_hosei = JACKET_SIZE-_jacket_image_ssize;
+    
+
     for (int i = 0; i < [dataArray count]; i++) {
-        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-        
         CALayer *roundRectLayer = [CALayer layer];
         roundRectLayer.frame = CGRectMake(0, 0, _jacket_image_ssize, _jacket_image_ssize);
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(_jacket_image_ssize, _jacket_image_ssize), NO, 0.f);
@@ -106,9 +108,11 @@ static NSMutableArray *_albumQueue;
         UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         roundRectLayer.contents = (id)img.CGImage;
+
+        
         UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
         aButton.frame = CGRectMake(JACKET_SIZE * x, JACKET_SIZE * y, _jacket_image_ssize, _jacket_image_ssize);
-        
+
         [CATransaction unlock];
         CALayer *albumLayer = [CALayer layer];
         [albumLayer setFrame:CGRectMake(0, 0, aButton.frame.size.width, aButton.frame.size.height)];
@@ -138,11 +142,12 @@ static NSMutableArray *_albumQueue;
         if (idx != NSNotFound) {
             [_albumQueue removeObjectAtIndex:idx];
         }
-        [pool drain];
     }
     self.scrollView.contentSize = CGSizeMake(320, JACKET_SIZE * y+1);
     _albumThreadRunning = NO;
     [CATransaction unlock];
+    [pool drain];
+
 }
 
 #pragma mark -
