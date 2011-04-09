@@ -20,5 +20,6 @@
 @property (nonatomic, retain) FirstViewController *delegate;
 
 -(NSMutableArray *)getAllAlbumJacketData;
+-(NSMutableDictionary *) getAlbumSongsFromID:(MPMediaItemCollection *)collection;
 
 @end

@@ -95,7 +95,7 @@ static NSMutableArray *_albumQueue;
     int x = 0;
     int y = 0;
     float _jacket_image_ssize = JACKET_SIZE * S_HOSEI;
-	float _x_y_hosei = JACKET_SIZE-_jacket_image_ssize;
+//	float _x_y_hosei = JACKET_SIZE-_jacket_image_ssize;
     
 
     for (int i = 0; i < [dataArray count]; i++) {
@@ -152,7 +152,8 @@ static NSMutableArray *_albumQueue;
 
 #pragma mark -
 #pragma mark scrollViewContents
--(void) setAlbumDataToScrollView {
+-(void) setAlbumDataToScrollView
+{
     if (!_albumQueue) {
         _albumQueue = [[NSMutableArray alloc] init];
     }

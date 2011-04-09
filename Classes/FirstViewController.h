@@ -12,7 +12,7 @@
 
 #define JACKET_SIZE 80
 
-@interface FirstViewController : UIViewController <UIScrollViewDelegate,UINavigationControllerDelegate,UITableViewDelegate,UITableViewDataSource>{
+@interface FirstViewController : UIViewController <UIScrollViewDelegate>{
     NSArray *dataArray;
     NSArray *albumArray;
     UIScrollView *scrollView;
@@ -21,4 +21,8 @@
 @property (nonatomic, retain) NSArray *dataArray;
 @property (nonatomic, retain) NSArray *albumArray;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+
+-(void) setAlbumDataToScrollView;
+-(void)albumTapped:(id)sender;
+
 @end

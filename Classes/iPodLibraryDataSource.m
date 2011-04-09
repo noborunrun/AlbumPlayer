@@ -7,7 +7,7 @@
 //
 
 #import "iPodLibraryDataSource.h"
-
+#import "FirstViewController.h"
 
 @implementation iPodLibraryDataSource
 @synthesize delegate;
@@ -20,7 +20,7 @@
     if ([_albums count] == 0) {
         return _array;
     }else {
-        [self.delegate setAlbumArray:_albums];
+        self.delegate.albumArray = _albums;
         int jacketCount = 0;
         for (int i = 0; i < [_albums count]; i++) {
             MPMediaItemCollection *collection = [_albums objectAtIndex:i];
@@ -36,7 +36,8 @@
     }
 }
 
--(NSMutableDictionary *) getAlbumSongsFromID:(MPMediaItemCollection *)collection {
+-(NSMutableDictionary *) getAlbumSongsFromID:(MPMediaItemCollection *)collection
+{
     NSMutableDictionary *_dict =[[NSMutableDictionary alloc] init];
     MPMediaItem *album = collection.representativeItem;
     NSString *albumTitle = [album valueForProperty:MPMediaItemPropertyAlbumTitle];
