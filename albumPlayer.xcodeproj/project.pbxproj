@@ -11,13 +11,14 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		28216C970DB411BC00E5133A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* FirstViewController.m */; };
+		28216C970DB411BC00E5133A /* APAlbumCoverViewControllelr.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* APAlbumCoverViewControllelr.m */; };
 		282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* SecondView.xib */; };
-		2840D7CE1179279E00D7F93C /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2840D7CD1179279E00D7F93C /* FirstView.xib */; };
+		2840D7CE1179279E00D7F93C /* APAlbumCoverViewControllelr.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2840D7CD1179279E00D7F93C /* APAlbumCoverViewControllelr.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		EC74A7CA131C5DF200EE9D99 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC74A7C9131C5DF200EE9D99 /* QuartzCore.framework */; };
-		F6750932131C04D500B79107 /* iPodLibraryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F6750931131C04D500B79107 /* iPodLibraryDataSource.m */; };
+		F610E216135CB3C900E7A424 /* APPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F610E215135CB3C900E7A424 /* APPlayer.m */; };
+		F6750932131C04D500B79107 /* APiPodLibraryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F6750931131C04D500B79107 /* APiPodLibraryDataSource.m */; };
 		F6750938131C089C00B79107 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6750937131C089C00B79107 /* MediaPlayer.framework */; };
 		F67509A4131C190700B79107 /* nonimage.png in Resources */ = {isa = PBXBuildFile; fileRef = F67509A3131C190700B79107 /* nonimage.png */; };
 /* End PBXBuildFile section */
@@ -28,18 +29,20 @@
 		1D3623250D0F684500981E51 /* albumPlayerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = albumPlayerAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* albumPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = albumPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		28216C950DB411BC00E5133A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		28216C960DB411BC00E5133A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		28216C950DB411BC00E5133A /* APAlbumCoverViewControllelr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAlbumCoverViewControllelr.h; sourceTree = "<group>"; };
+		28216C960DB411BC00E5133A /* APAlbumCoverViewControllelr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAlbumCoverViewControllelr.m; sourceTree = "<group>"; };
 		282CCBFD0DB6C98000C4EA27 /* SecondView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
-		2840D7CD1179279E00D7F93C /* FirstView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstView.xib; sourceTree = "<group>"; };
+		2840D7CD1179279E00D7F93C /* APAlbumCoverViewControllelr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = APAlbumCoverViewControllelr.xib; path = ../APAlbumCoverViewControllelr.xib; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* albumPlayer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = albumPlayer_Prefix.pch; sourceTree = "<group>"; };
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* albumPlayer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "albumPlayer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		EC74A7C9131C5DF200EE9D99 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		F6750930131C04D500B79107 /* iPodLibraryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPodLibraryDataSource.h; sourceTree = "<group>"; };
-		F6750931131C04D500B79107 /* iPodLibraryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPodLibraryDataSource.m; sourceTree = "<group>"; };
+		F610E214135CB3C900E7A424 /* APPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPlayer.h; sourceTree = "<group>"; };
+		F610E215135CB3C900E7A424 /* APPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPlayer.m; sourceTree = "<group>"; };
+		F6750930131C04D500B79107 /* APiPodLibraryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APiPodLibraryDataSource.h; sourceTree = "<group>"; };
+		F6750931131C04D500B79107 /* APiPodLibraryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APiPodLibraryDataSource.m; sourceTree = "<group>"; };
 		F6750937131C089C00B79107 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		F67509A3131C190700B79107 /* nonimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nonimage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,12 +66,15 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				28216C950DB411BC00E5133A /* FirstViewController.h */,
-				28216C960DB411BC00E5133A /* FirstViewController.m */,
-				F6750930131C04D500B79107 /* iPodLibraryDataSource.h */,
-				F6750931131C04D500B79107 /* iPodLibraryDataSource.m */,
+				28216C950DB411BC00E5133A /* APAlbumCoverViewControllelr.h */,
+				28216C960DB411BC00E5133A /* APAlbumCoverViewControllelr.m */,
+				2840D7CD1179279E00D7F93C /* APAlbumCoverViewControllelr.xib */,
+				F6750930131C04D500B79107 /* APiPodLibraryDataSource.h */,
+				F6750931131C04D500B79107 /* APiPodLibraryDataSource.m */,
 				1D3623240D0F684500981E51 /* albumPlayerAppDelegate.h */,
 				1D3623250D0F684500981E51 /* albumPlayerAppDelegate.m */,
+				F610E214135CB3C900E7A424 /* APPlayer.h */,
+				F610E215135CB3C900E7A424 /* APPlayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -107,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				F67509A2131C190700B79107 /* image */,
-				2840D7CD1179279E00D7F93C /* FirstView.xib */,
 				282CCBFD0DB6C98000C4EA27 /* SecondView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* albumPlayer-Info.plist */,
@@ -188,7 +193,7 @@
 			files = (
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
 				282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */,
-				2840D7CE1179279E00D7F93C /* FirstView.xib in Resources */,
+				2840D7CE1179279E00D7F93C /* APAlbumCoverViewControllelr.xib in Resources */,
 				F67509A4131C190700B79107 /* nonimage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,8 +207,9 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* albumPlayerAppDelegate.m in Sources */,
-				28216C970DB411BC00E5133A /* FirstViewController.m in Sources */,
-				F6750932131C04D500B79107 /* iPodLibraryDataSource.m in Sources */,
+				28216C970DB411BC00E5133A /* APAlbumCoverViewControllelr.m in Sources */,
+				F6750932131C04D500B79107 /* APiPodLibraryDataSource.m in Sources */,
+				F610E216135CB3C900E7A424 /* APPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

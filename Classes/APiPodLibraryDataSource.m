@@ -6,24 +6,25 @@
 //  Copyright 2011 Nine Drafts Inc.. All rights reserved.
 //
 
-#import "iPodLibraryDataSource.h"
+#import "APiPodLibraryDataSource.h"
 #import "FirstViewController.h"
 
-@implementation iPodLibraryDataSource
+@implementation APiPodLibraryDataSource
 @synthesize delegate;
 
 -(NSMutableArray *)getAllAlbumJacketData {
     NSMutableArray *_array = [[NSMutableArray alloc] init];
     MPMediaQuery *albumQuery = [MPMediaQuery albumsQuery];
-    NSArray *_albums = [[albumQuery collections] retain];
+    [albumQuery setGroupingType:MPMediaGroupingAlbum];
+    albums = [albumQuery collections];
     
-    if ([_albums count] == 0) {
+    if ([albums count] == 0) {
         return _array;
     }else {
-        self.delegate.albumArray = _albums;
+//        self.delegate.albumArray = albums;
         int jacketCount = 0;
-        for (int i = 0; i < [_albums count]; i++) {
-            MPMediaItemCollection *collection = [_albums objectAtIndex:i];
+        for (int i = 0; i < [albums count]; i++) {
+            MPMediaItemCollection *collection = [albums objectAtIndex:i];
             MPMediaItem *artwork = collection.representativeItem;
             if ([artwork valueForProperty:MPMediaItemPropertyArtwork]) {
                 [_array insertObject:[[artwork valueForProperty:MPMediaItemPropertyArtwork] imageWithSize:CGSizeMake(JACKET_SIZE, JACKET_SIZE)] atIndex:jacketCount];
@@ -36,11 +37,12 @@
     }
 }
 
--(NSMutableDictionary *) getAlbumSongsFromID:(MPMediaItemCollection *)collection
+//-(NSMutableDictionary *) getAlbumSongsFromID:(MPMediaItemCollection *)collection
+-(NSMutableDictionary *) getAlbumSongsFromID:(NSInteger)albumId
 {
     NSMutableDictionary *_dict =[[NSMutableDictionary alloc] init];
-    MPMediaItem *album = collection.representativeItem;
-    NSString *albumTitle = [album valueForProperty:MPMediaItemPropertyAlbumTitle];
+//    MPMediaItem *album = collection.representativeItem;
+    NSString *albumTitle = [[[albums objectAtIndex:albumId] representativeItem] valueForProperty:MPMediaItemPropertyAlbumTitle];
     NSLog(@"%@",albumTitle);
     [_dict setObject:albumTitle forKey:@"AlbumTitle"];
     return _dict;

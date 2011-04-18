@@ -13,13 +13,14 @@
 
 @class FirstViewController;
 
-@interface iPodLibraryDataSource : NSObject {
+@interface APiPodLibraryDataSource : NSObject {
     FirstViewController *delegate;
+    NSArray *albums;
 }
 
 @property (nonatomic, retain) FirstViewController *delegate;
 
 -(NSMutableArray *)getAllAlbumJacketData;
--(NSMutableDictionary *) getAlbumSongsFromID:(MPMediaItemCollection *)collection;
-
+//-(NSMutableDictionary *) getAlbumSongsFromID:(MPMediaItemCollection *)collection;
+-(NSMutableDictionary *) getAlbumSongsFromID:(NSInteger)albumId;
 @end

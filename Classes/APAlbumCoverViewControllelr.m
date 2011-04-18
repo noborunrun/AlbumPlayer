@@ -10,12 +10,12 @@
 #define HEXCOLOR(c) [UIColor colorWithRed:((c>>16)&0xFF)/255.0 green:((c>>8)&0xFF)/255.0 blue:(c&0xFF)/255.0 alpha:1.0];
 
 #import <QuartzCore/QuartzCore.h>
-#import "FirstViewController.h"
-#import "iPodLibraryDataSource.h"
+#import "APAlbumCoverViewControllelr.h"
+#import "APiPodLibraryDataSource.h"
 
-@implementation FirstViewController
+@implementation APAlbumCoverViewControllelr
 @synthesize dataArray;
-@synthesize albumArray;
+//@synthesize albumArray;
 @synthesize scrollView;
 
 /*
@@ -39,7 +39,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-    iPLDS = [[iPodLibraryDataSource alloc] init];
+    iPLDS = [[APiPodLibraryDataSource alloc] init];
     iPLDS.delegate = self;
     self.dataArray = [iPLDS getAllAlbumJacketData];
     self.scrollView.contentSize = CGSizeMake(320, 480);
@@ -166,8 +166,8 @@ static NSMutableArray *_albumQueue;
 
 -(void)albumTapped:(id)sender {
     NSLog(@"%d",[sender tag]);
-    NSDictionary *_dict = [iPLDS getAlbumSongsFromID:[self.albumArray objectAtIndex:[sender tag]]];
-    
+//    NSDictionary *_dict = [iPLDS getAlbumSongsFromID:[self.albumArray objectAtIndex:[sender tag]]];
+    NSDictionary *_dict = [iPLDS getAlbumSongsFromID:[sender tag]];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat: @"%@",_dict] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
     

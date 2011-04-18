@@ -8,15 +8,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "iPodLibraryDataSource.h"
 
 #define JACKET_SIZE 80
 
-@interface FirstViewController : UIViewController <UIScrollViewDelegate>{
+@class APiPodLibraryDataSource;
+
+@interface APAlbumCoverViewControllelr : UIViewController <UIScrollViewDelegate>{
     NSArray *dataArray;
-    NSArray *albumArray;
+//    NSArray *albumArray;
     UIScrollView *scrollView;
-    iPodLibraryDataSource *iPLDS;
+    APiPodLibraryDataSource *iPLDS;
 }
 @property (nonatomic, retain) NSArray *dataArray;
 @property (nonatomic, retain) NSArray *albumArray;
